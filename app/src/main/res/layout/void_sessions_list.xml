@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_folder_black_100dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/void1"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/image"
+            android:layout_width="290sp"
+            android:layout_height="wrap_content"
+            android:text="Nessuna sessione trovata per questo corso"
+            android:fontFamily="casual"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/void2"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_below="@id/void1"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Inserisci una nuova sessione di studio."
+            android:gravity="center"/>
+
+    </RelativeLayout>
+</RelativeLayout>

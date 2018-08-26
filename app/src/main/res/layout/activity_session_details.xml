@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxWidth="580dp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".SessionDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/session_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/session_actionbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_session_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/session_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Titolo sessione*"
+                    android:padding="8dp"
+                    android:textSize="24sp"
+                    android:inputType="text"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- DATA -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_date_range_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_session_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data*"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox" >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/session_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Orario -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_access_time_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_session_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ora di inizio*"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/session_time_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="time"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Durata sessione -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_timer_black_24dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_session_length"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Durata*"
+                    app:errorEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox" >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/session_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/time_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <!-- Numero pagine -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_library_books_black_24dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_session_pages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pagine previste*"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/session_pages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:paddingTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_note_black_24dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Note"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="500"
+                    app:helperText="Descrivi i tuoi obiettivi per questa sessione">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/session_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

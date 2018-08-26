@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxWidth="580dp"
+    android:layout_gravity="center_horizontal"
+    tools:context=".NewExamActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/new_exam_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_exam_actionbar">
+
+        <!-- Nome esame -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/new_exam_course_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/new_exam_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Nome Corso *"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textSize="24sp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Data esame -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_date_range_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/new_exam_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data dell'esame *"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    app:errorEnabled="true" >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/new_exam_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:focusable="false" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Pagine da studiare -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_library_books_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/new_exam_pages_number_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pagine da studiare *"
+                    app:errorEnabled="true"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/new_exam_pages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Note -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:paddingTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_note_black_24dp"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Note del corso"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    app:helperText="Dettagli sul corso">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/new_exam_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:maxWidth="600dp"
+    tools:context=".EndActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/end_session_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/end_session_actionbar"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fafafa"
+            android:orientation="vertical">
+
+            <!-- Esame -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:text="Esame" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/session_exam_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
+            <!-- Sessione -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:text="Sessione" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingRight="4dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.8"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/end_info_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/end_info_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:alpha="0.6" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/end_info_duration"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:text="Pagine programmate"
+                                android:paddingLeft="16dp"
+                                android:paddingStart="16dp"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:id="@+id/end_info_pages"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="4dp"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingRight="4dp"
+                                android:gravity="center"
+                                android:textSize="18sp"/>
+                        </LinearLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/til_end_session_pages"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:errorEnabled="true"
+                            android:gravity="center"
+                            android:hint="Pagine studiate"
+                            app:helperTextEnabled="true"
+                            app:helperText="* in questa sessione">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/end_session_pages_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:id="@+id/til_end_session_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:hint="Note della sessione"
+                        android:layout_marginTop="16dp">
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/end_session_notes_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
