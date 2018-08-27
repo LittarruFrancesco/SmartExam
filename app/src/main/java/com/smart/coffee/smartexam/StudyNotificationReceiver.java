@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 
@@ -106,6 +107,8 @@ public class StudyNotificationReceiver extends BroadcastReceiver {
                 break;
 
             case NOTIFICATION_START_ID: // notifica di inizio studio -> utente ha iniziato a studiare
+
+                Toast.makeText(context, "Sessione di studio iniziata", Toast.LENGTH_LONG).show();
 
                 notificationManager.cancelAll();
 

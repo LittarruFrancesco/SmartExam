@@ -67,7 +67,7 @@ public class InfoSessionActivity extends AppCompatActivity {
                         .setText(currentSession.getInfoCompleted());
             }
             ((TextView) findViewById(R.id.session_info_date))
-                    .setText("Completata il "+day+"/"+month+"/"+year);
+                    .setText("Completata in data "+day+"/"+month+"/"+year);
 
         }else{
             ((TextView) findViewById(R.id.session_info_pages))

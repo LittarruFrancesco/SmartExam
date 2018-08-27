@@ -19,6 +19,9 @@
             android:id="@+id/tab_layout"
             android:layout_height="40dp"
             android:layout_width="wrap_content"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
             android:layout_gravity="top"
             app:tabBackground="@color/colorPrimary" />
 

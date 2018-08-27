@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:maxWidth="580dp"
     android:layout_gravity="center_horizontal"
     tools:context=".NewExamActivity">
 
