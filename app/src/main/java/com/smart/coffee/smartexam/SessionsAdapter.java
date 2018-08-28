@@ -58,7 +58,21 @@ public class SessionsAdapter extends ArrayAdapter<Session> {
 
         dateTextView.setText(sessionDate);
 
-        timeView.setText(currentSession.getHour()+":"+currentSession.getMinute());
+        int h = currentSession.getHour();
+        int m = currentSession.getMinute();
+        String hS,mS;
+        if(h<10){
+            hS="0"+h;
+        }else{
+            hS=""+h;
+        }
+
+        if(m<10){
+            mS="0"+m;
+        }else{
+            mS=""+m;
+        }
+        timeView.setText(hS+":"+mS);
 
         String sessionDuration = ""+currentSession.getDuration();
         sessionTextView.setText(sessionDuration);
