@@ -52,6 +52,24 @@ public class InfoSessionActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.info_session_exam_date))
                 .setText("Esame il "+day+"/"+month+"/"+year);
 
+        int h = currentSession.getHour();
+        int m = currentSession.getMinute();
+        String hS,mS;
+        if(h<10){
+            hS="0"+h;
+        }else{
+            hS=""+h;
+        }
+
+        if(m<10){
+            mS="0"+m;
+        }else{
+            mS=""+m;
+        }
+        ((TextView) findViewById(R.id.session_time_info))
+                .setText("Dalle "+hS+":"+mS+" per "+currentSession.getDuration());
+
+
         date = currentSession.getCalendarDate();
         day = ""+date.get(Calendar.DAY_OF_MONTH);
         month = ""+date.get(Calendar.MONTH);
