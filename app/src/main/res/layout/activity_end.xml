@@ -114,15 +114,10 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="130dp"
-                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
+                            android:layout_height="56dp"
                             android:orientation="horizontal">
                             <TextView
                                 android:layout_width="0dp"
@@ -131,6 +126,7 @@
                                 android:text="Pagine programmate"
                                 android:paddingLeft="16dp"
                                 android:paddingStart="16dp"
+                                android:gravity="center_vertical"
                                 android:textSize="16sp"/>
                             <TextView
                                 android:id="@+id/end_info_pages"
@@ -148,18 +144,17 @@
                             android:id="@+id/til_end_session_pages"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.5"
-                            android:layout_marginTop="16dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginRight="16dp"
                             app:errorEnabled="true"
+                            app:helperText="Campo obbligatorio"
                             android:gravity="center"
-                            android:hint="Pagine studiate"
-                            app:helperTextEnabled="true"
-                            app:helperText="* in questa sessione"
+                            android:hint="Pagine studiate*"
                             android:nextFocusDown="@id/til_end_session_notes">
 
                             <android.support.design.widget.TextInputEditText
@@ -168,7 +163,7 @@
                                 android:layout_height="match_parent"
                                 android:inputType="number"/>
                         </android.support.design.widget.TextInputLayout>
-                    </LinearLayout>
+
                     <android.support.design.widget.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                         android:id="@+id/til_end_session_notes"
@@ -179,11 +174,12 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:hint="Note della sessione"
-                        android:layout_marginTop="16dp">
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
                         <android.support.design.widget.TextInputEditText
                             android:id="@+id/end_session_notes_edit_text"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="match_parent" />
                     </android.support.design.widget.TextInputLayout>
                 </LinearLayout>
             </FrameLayout>
