@@ -123,7 +123,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp">
 
                 <ImageView
@@ -215,7 +214,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                     app:counterEnabled="true"
                     app:counterMaxLength="500"
-                    app:helperText="Descrivi i tuoi obiettivi per questa sessione">
+                    app:helperText="I tuoi obiettivi per questa sessione">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/session_note"

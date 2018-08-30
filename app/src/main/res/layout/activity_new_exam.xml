@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Note del corso"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    app:helperText="Dettagli sul corso">
+                    app:helperText="Informazioni generali sul corso (es: nome del libro)">
 
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/new_exam_note"
