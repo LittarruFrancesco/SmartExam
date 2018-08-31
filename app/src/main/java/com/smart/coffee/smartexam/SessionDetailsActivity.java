@@ -162,7 +162,15 @@ public class SessionDetailsActivity extends AppCompatActivity implements DialogD
     public void onTimePass(int hour, int minute) {
         this.hour = hour;
         this.minute = minute;
-        sessionTimeEdit.setText(hour + ":" + minute);
+        String h =""+hour;
+        String m =""+minute;
+        if(hour < 10){
+            h="0"+hour;
+        }
+        if(minute< 10){
+            m="0"+minute;
+        }
+        sessionTimeEdit.setText(h + ":" + m);
     }
 
 
